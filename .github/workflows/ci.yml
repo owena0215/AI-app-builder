@@ -1,4 +1,5 @@
-﻿name: CI
+name: CI
+
 on:
   push:
   pull_request:
@@ -8,4 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo '✅ CI passed'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: echo "CI pipeline placeholder"
